@@ -1,38 +1,67 @@
 .App {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
   text-align: center;
+  margin-left: 350px;
+}
+.header {
+  width: 800px;
+  height: 100px;
+  background-image: url();
+  font-size: xx-large;
+}
+.container {
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-template-rows: 400px 400px;
+  border-radius: 6px;
+  font-size: larger;
+  flex: 1;
+  cursor: pointer;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section1 {
+  background-image: url('./img/tree.jpg');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.section2 {
+  background-image: url('./img/sea.jpg');
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.section3 {
+  background-image: url('./img/coffee.jpg');
+}
+
+.section4 {
+  background-image: url('./img/flower.jpg');
+}
+
+.section1, .section2, .section3, .section4{
+  height: 100%;
+  border-radius: 7px;
+  background-size: 400px;
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+
+.section1 div, .section2 div, .section3 div, .section4 div{
+  margin-top: 30%;
+}
+
+.section1:hover, .section2:hover, .section3:hover, .section4:hover {
+  opacity: 1.0;
+  transform: scale(1.20);
+  transition-duration: 0.5s;
+  filter: grayscale(0%);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container:hover{
+  flex: 3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
