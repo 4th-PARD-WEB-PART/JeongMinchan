@@ -1,134 +1,148 @@
+/*--------------------------최상위 요소------------------------------*/
+
 .App {
-  font-family: "Josefin Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
-  text-align: center;
-  display: grid;
-  justify-content: center;
-  background-color: rgb(181, 214, 146, 0.1);
-  gap: 100px;
-}
-
-
-.header {
-  display: flex;
-  width: 800px;
-  height: 100px;
-  background-image: url();
-  font-size: xx-large;
-  text-align: center;
-}
-
-.introduce {
-  margin-top: 30px;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 400px 400px;
-  grid-template-rows: 400px 400px;
-  border-radius: 6px;
-  font-size: x-large;
-  cursor: pointer;
-}
-
-.section_center{
-  width: auto;
-  position: absolute;
-  font-size: xx-large;
-  translate: 240px 325px;
-}
-.img_box {
-  width: 100px;
-  height: 100px;
-  margin-right: 28%;
-  background-image: url('./img/Me.jpeg');
-  background-size: cover;
-}
-
-.section1 {
-  background-image: url('./img/tree.jpg');
-}
-
-.section2 {
-  background-image: url('./img/sea.jpg');
-}
-
-.section3 {
-  background-image: url('./img/coffee.jpg');
-}
-
-.section4 {
-  background-image: url('./img/flower.jpg');
-}
-
-.section1, .section2, .section3, .section4{
-  height: 100%;
-  border-radius: 7px;
-  background-size: cover;
-  filter: grayscale(100%);
-  color: gray;
-  opacity: 0.3;
-}
-
-.section1 div, .section2 div, .section3 div, .section4 div{
-  margin-top: 30%;
-}
-
-.section1:hover, .section2:hover, .section3:hover, .section4:hover, .pard_section:hover {
-  opacity: 1.0;
-  transform: scale(1.20);
-  transition-duration: 0.5s;
-  filter: grayscale(0%);
-  color: white;
-}
-
-
-
-
-.pard_section{
-  width: 800px;
-  height: 800px;
-  margin-top: 500px;
-  background-image: url("./img/PADO.jpg");
-  background-size: cover;
-  color: white;
-  position: relative;
-  font-size: xx-large;
-  text-shadow: none;
-}
-
-.section_top{
-  float: left;
-  margin-left: 10%;
-  margin-top: 10%;
-}
-
-.section_bottom{
-  float: right;
-  margin-top: 30%;
+  font-family: "Josefin Sans", sans-serif; /* 글씨 폰트 */
+  font-weight: 500; /* 폰트 굵기 */
+  text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black; /* 텍스트 그림자 */
+  text-align: center; /* 텍스트 정렬 */
+  display: grid; 
+  justify-content: center; /* 콘텐츠 수평 가운데 정렬 */
+  background-color: rgb(181, 214, 146, 0.1); /*  배경 색 rgb(color,color,color,opacity);  */
   
 }
 
+/*--------------------------헤더 요소------------------------------*/
+
+.header {
+  display: flex; /* 그리드 설정 위해 선언 */
+  width: 800px; /* 행 길이 */
+  height: 100px; /* 열 길이 */
+  font-size: xx-large; /* 폰트 크기 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.img_box {
+  width: 100px; /* 행 길이 */
+  height: 100px; /* 열 길이 */
+  margin-right: 28%; /* 요소 오른쪽 여백 */
+  background-image: url('./img/Me.jpeg'); /* 배경 이미지 삽입 */
+  background-size: cover; /* 배경 이미지 사이즈 맞추기 */
+}
+
+.introduce {
+  margin-top: 30px; /* 요소 위 여백 */
+}
+
+/*----------------------------컨테이너 요소------------------------------*/
+
+.container {
+  display: grid; /* 그리드 설정 위해 선언 */
+  grid-template-columns: 400px 400px; /* 그리드 열 나누기 */
+  grid-template-rows: 400px 400px; /* 그리드 행 나누기 */
+  border-radius: 6px; /* 모서리 굴곡 */
+  margin-top: 100px; /* 요소 위 여백 */
+  font-size: x-large; /* 폰트 크기 */
+  cursor: pointer; /* 마우스 커서 */
+}
+
+.section_center{
+  width: auto; /* 넓이 자동 */
+  position: absolute;
+  /* 요소 위치 절대적! -> 스크롤하면 좌표 고정 X */
+  /* position: fixed; -> 스크롤해도 좌표 고정 */
+  font-size: xx-large; /* 폰트 크기 */
+  translate: 240px 325px; /* 요소 위치 지정 */
+}
+
+.section1, .section2, .section3, .section4{
+  height: 100%; /* 요소 열 꽉 채우기 */
+  border-radius: 7px; /* 모서리 굴곡 */
+  background-size: cover; /* 배경 이미지 사이즈 맞추기 */
+  filter: grayscale(100%); /* 요소에 필터 적용 */
+  color: gray; /* 글자 색깔 */
+  opacity: 0.3; /* 투명도 */
+}
+
+.section1 {
+  background-image: url('./img/tree.jpg'); /* 이미지 삽입 */
+}
+
+.section2 {
+  background-image: url('./img/sea.jpg'); /* 이미지 삽입 */
+}
+
+.section3 {
+  background-image: url('./img/coffee.jpg'); /* 이미지 삽입 */
+}
+
+.section4 {
+  background-image: url('./img/flower.jpg'); /* 이미지 삽입 */
+}
+
+.section1 div, .section2 div, .section3 div, .section4 div{
+  margin-top: 30%; /* 상위 여백 */
+}
+
+.section1:hover, .section2:hover, .section3:hover, .section4:hover {
+  opacity: 1.0; /* 투명도 max */
+  transform: scale(1.20); /* 크기 커지기 */
+  transition-duration: 0.5s;
+  filter: grayscale(0%); /* 필터 적용 */
+  color: white; /* 글자 색깔 */
+}
+
+/*---------------------------파도 요소-------------------------------*/
+
+.pard_section{
+  width: 800px; /* 행 길이 */
+  height: 800px; /* 열 길이 */
+  margin-top: 500px; /* 상위 여백 */
+  background-image: url("./img/PADO.jpg"); /* 이미지 삽입 */
+  background-size: cover; /* 배경 이미지 사이즈 맞추기 */
+  color: white; /* 글자 색깔 */
+  position: relative; 
+  font-size: xx-large; /* 글자 크기 */
+  text-shadow: none; /* 글자 그림자 */
+}
+.pard_section:hover {
+  opacity: 1.0; /* 투명도 */
+  transform: scale(1.20); /* 크기 커지기 */
+  transition-duration: 0.5s; /* 크기 커지는 시간 */
+  filter: grayscale(0%); /* 필터 적용 */
+  color: white; /* 글자 색깔 */
+}
+
+.section_top{
+  float: left; /* 왼쪽 배치 */
+  margin-left: 10%; /* 왼쪽 여백 */
+  margin-top: 10%; /* 상위 여백 */
+}
+
+.section_bottom{
+  float: right; /* 오른쪽 배치 */
+  margin-top: 30%; /* 상위 여백 */
+  
+}
+
+/*---------------------------푸터 요소-------------------------------*/
+
 .footer{
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  width: 800px;
-  height: 300px;
-  margin-top: 100px;
-  text-shadow: none;
+  grid-template-columns: 25% 25% 25% 25%; /* 그리드 열 나누기 */
+  width: 800px; /* 행 길이 */
+  height: 300px; /* 열 길이 */
+  margin-top: 100px; /* 상위 여백 */
+  text-shadow: none; /* 글자 그림자 */
 }
 
 a {
-  text-decoration-line: none;
+  text-decoration-line: none; /* 링크 밑줄 */
 }
 
 .f_section{
-  text-align: center;
-  margin-top: 50%;
+  text-align: center; /* 텍스트 가운데 정렬 */
+  margin-top: 50%; /* 상위 여백 */
 }
 
-
+/*----------------------------------------------------------*/
 
