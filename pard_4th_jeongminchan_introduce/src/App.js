@@ -7,7 +7,6 @@ function App() {
         <div className="img_box"></div>
         <div className="introduce">MinchoLover</div>
       </div>
-      
       <div className="container">
         <div className="section_center">
           <h1>ABOUT ME . .</h1>
@@ -23,9 +22,9 @@ function App() {
         <div className="section2">
           <div>
             <h3>Challenge</h3>
-            <p>받는 사람에서 도와주는 사람으로의 성장</p>
-            <p>익숙함에 속지 않는 사람으로의 성장</p>
-            <p>🌊파도에 맞설 수 있는 사람으로의 성장🌊</p>
+            <p>주어진 일에 최선 다하기</p>
+            <p>번아웃 오지 않기</p>
+            <p>CC (ㅋ)</p>
           </div>
         </div>
         <div className="section3">
@@ -62,8 +61,16 @@ function App() {
             Portpolio
           </a>
         </div>
-        <div className="f_section">This is footer</div>
-        <div className="f_section">This is footer</div>
+        <div className="f_section">
+          <a href="https://www.instagram.com/minzzhan/">
+            instagram
+          </a>
+        </div>
+        <div className="f_section">
+          <a href="https://velog.io/@jeongmincho/posts">
+            develop
+          </a>
+        </div>
       </div>
     </div>
   );
