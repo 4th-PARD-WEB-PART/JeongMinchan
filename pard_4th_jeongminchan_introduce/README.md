@@ -36,22 +36,29 @@
 이 프로젝트를 로컬에서 실행하려면 아래의 단계를 따르세요:
 
 1. 저장소를 클론합니다:
+
     ```bash
+    
     git clone https://github.com/your-username/your-repo-name.git
     ```
 
 2. 프로젝트 디렉터리로 이동합니다:
+
     ```bash
+
     cd your-repo-name
     ```
 
 3. 의존성을 설치합니다:
+
     ```bash
     npm install
     ```
 
 4. 프로젝트를 실행합니다:
+
     ```bash
+
     npm start
     ```
 
