@@ -16,47 +16,47 @@ p {
   margin-top: 15px;
 }
 .header {
-  display: flex;
-  width: 800px;
-  height: 100px;
-  font-size: xx-large;
-  text-align: center;
+  display: flex; /* 공간 자동 분배*/
+  width: 800px; /* 행 길이 */
+  height: 100px; /* 열 길이 */
+  font-size: xx-large; /* 폰트 크기 */
+  text-align: center; /* 텍스트 가운데 정렬 */
 }
 
 .img-box {
-  width: 100px;
-  height: 100px;
-  margin-right: 28%;
-  background-image: url('./img/Me.jpeg');
-  background-size: cover;
+  width: 100px; /* 행 길이 */
+  height: 100px; /* 열 길이 */
+  margin-right: 28%; /* 오른쪽 여백 */
+  background-image: url('./img/Me.jpeg'); /* 이미지 삽입 */
+  background-size: cover; /* 화면 크기 */
 }
 
 .header-title {
-  margin-top: 30px;
+  margin-top: 30px; /* 상위 여백 */
 }
 
 /*----------------------------소개 섹션------------------------------*/
 
 .about-container {
-  display: grid;
+  display: grid; /* 공간 그리드 분배 */
   grid-template-columns: repeat(2, 400px); /* 2열로 나눔 */
   grid-template-rows: repeat(2, 400px); /* 2행으로 나눔 */
-  border-radius: 6px;
-  margin-top: 100px;
-  font-size: x-large;
+  border-radius: 6px; /* 꼭짓점 둥글기 */
+  margin-top: 100px; /* 상위 여백 */
+  font-size: x-large; /* 폰트 크기 */
 }
 
 .section-center {
-  width: auto;
-  position: absolute;
-  font-size: xx-large;
-  translate: 240px 325px;
+  width: auto; /* 행 크기 */
+  position: absolute; /* 절대적 위치 */
+  font-size: xx-large; /* 폰트 사이즈 */
+  translate: 240px 325px; /* 요소 위치 이동 */
 }
 
 .texthover1:hover, .texthover2:hover, .texthover3:hover, .texthover4:hover{
-  font-weight: 1000;
-  transform: scale(2.0);
-  transition: transform 0.5s;
+  font-weight: 1000; /* 폰트 굵기 */
+  transform: scale(2.0); /* 크기 증가 */
+  transition: transform 0.5s; /* 증가하는데 걸리는 시간 */
 }
 .texthover1:hover{
   color: rgb(126, 136, 168);
@@ -76,9 +76,9 @@ p {
   height: 100%;
   border-radius: 7px;
   background-size: cover;
-  filter: grayscale(100%);
+  filter: grayscale(100%); /* 필터 */
   color: gray;
-  opacity: 0.3;
+  opacity: 0.3; /* 투명도 */
   transition: opacity 0.5s, transform 0.5s;
 }
 
@@ -114,11 +114,11 @@ p {
   background-size: cover;
   color: white;
   font-size: xx-large;
-  text-shadow: none;
+  text-shadow: none; /* 텍스트 그림자 */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* 자식 요소들 정렬 */
+  justify-content: center; /* 자식 요소 가운데 정렬 */
+  align-items: center; /* 자식 요소 가운데 정렬 */
   transition: transform 0.5s;
 }
 
