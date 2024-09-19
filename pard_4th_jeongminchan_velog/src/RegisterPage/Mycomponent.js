@@ -14,6 +14,7 @@ export const Input = styled.input `
 /* Label 밑줄 요소 */
 export const Span = styled.span `
   text-decoration: underline;
+  color: #15B886;
 `;
 
 
@@ -22,9 +23,7 @@ export const Label = styled.p `
   font-size: 14px;
   font-weight: bold;
   color: #ACB5BD;
-  &:hover ${Span}{
-    color: #15B886;
-  }
+  
 `;
 
 /* 헤더 -> H1 */
@@ -112,6 +111,7 @@ export const Introduce = styled.div `
 /* ------------------------------------------개인정보 약관 동의 요소-------------------------------------------- */
 
 export const Checkbox = styled.input `
+&:$
 `;
 
 export const Box = styled.div `
