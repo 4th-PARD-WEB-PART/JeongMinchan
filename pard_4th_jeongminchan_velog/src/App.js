@@ -16,7 +16,7 @@ import {
     Page,
     Password,
     Span
-} from './RegisterPage/Mycomponent';
+} from './Pages/RegisterPage/Mycomponent';
 
 function App() {
     return (
