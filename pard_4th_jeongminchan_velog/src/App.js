@@ -1,4 +1,3 @@
-import './App.css';
 import {
     BaseContainer,
     Body,
@@ -17,6 +16,8 @@ import {
     Password,
     Span
 } from './Pages/RegisterPage/Mycomponent';
+
+
 
 function App() {
     return (
@@ -73,5 +74,6 @@ function App() {
         </Page>
     );
 }
+
 
 export default App;
