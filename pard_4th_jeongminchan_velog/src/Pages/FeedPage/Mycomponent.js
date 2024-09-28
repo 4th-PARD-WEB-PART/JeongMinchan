@@ -19,24 +19,27 @@ export const FeedContainer = styled.div`
 // 헤더 섹션
 export const FeedHeader = styled.div`
   display: flex;
+  flex-direction: column; // Stack children vertically
   justify-content: space-between;
-  align-items: center;
-  padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
-
-  h1 {
-    font-size: 24px;
-    font-weight: bold;
-  }
-
-  button {
-    background-color: transparent;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    margin-left: 10px;
-  }
 `;
+
+// 헤더 상단 섹션
+export const FeedHeaderTop = styled.div`
+  flex: 1; // Take up half the height
+  display: flex; // Use flexbox for layout
+  align-items: center; // Center items vertically
+  justify-content: space-between; // Space items evenly
+`;
+
+// 헤더 하단 섹션
+export const FeedHeaderBottom = styled.div`
+  flex: 1; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 
 // 포스트 그리드
 export const PostGrid = styled.div`
@@ -126,4 +129,26 @@ export const LikeIcon = styled.span`
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+`;
+
+// 버튼 아이콘
+export const ButtonIcon = styled.button`
+  font-size: 14px;
+  align-items: center;
+  width: 100px;
+  height: 33px;
+
+  &:hover {
+    background-color: #f8f9fa;
+  }
+gap: 0px;
+border-radius: 16.5px 0px 0px 0px;
+border: 1px 0px 0px 0px;
+opacity: 0px;
+
+`;
+
+export const Image = styled.img`
+  width: 15px;
+  height: 15px;
 `;

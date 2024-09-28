@@ -9,6 +9,7 @@ export const Input = styled.input `
   &::placeholder {
     font-size: 17px;
     color: #ACB5BD;
+  }
 `;
 
 /* Label 밑줄 요소 */
@@ -111,7 +112,6 @@ export const Introduce = styled.div `
 /* ------------------------------------------개인정보 약관 동의 요소-------------------------------------------- */
 
 export const Checkbox = styled.input `
-&:$
 `;
 
 export const Box = styled.div `
