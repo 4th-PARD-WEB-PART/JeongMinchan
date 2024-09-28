@@ -17,11 +17,14 @@ import {
     FeedHeaderBottom,
     FeedHeaderTop,
     ButtonIcon,
-    // StyledImage
+    StyledImage
 } from './Mycomponent';
-// import BellIcon from '/image/bell.png';
+
+
+
 
 function FeedPage() {
+    const BellIcon = "/src/image/bell.png";
     const posts = [
         {
             id: 1,
@@ -106,9 +109,9 @@ function FeedPage() {
                                 alignItems: 'center'
                             }}>
                                 <div>
-                                {/* <StyledImage src={BellIcon} alt="Bell Icon" /> */}
-                                    {/* <StyledImage
-                                     src={BellIcon} alt='Bell Icon'/> */}
+                                <StyledImage src={BellIcon} alt='' />
+                                    <StyledImage
+                                     src={BellIcon} alt=''/>
                                     <ButtonIcon>새 글 작성</ButtonIcon>
                                 </div>
                                 <div style={{
@@ -125,7 +128,7 @@ function FeedPage() {
                             트렌딩 최신 피드
                         </div>
                         <div>
-                            <div>select</div>
+                            <div>이번 주</div>
                             <div>...</div>
                         </div>
                     </FeedHeaderBottom>

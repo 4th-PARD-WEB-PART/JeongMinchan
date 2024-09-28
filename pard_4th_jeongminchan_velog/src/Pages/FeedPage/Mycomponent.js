@@ -21,7 +21,7 @@ export const FeedHeader = styled.div`
   display: flex;
   flex-direction: column; // Stack children vertically
   justify-content: space-between;
-  border-bottom: 1px solid #ddd;
+  
 `;
 
 // 헤더 상단 섹션
