@@ -1,23 +1,20 @@
-# Velog 회원가입 페이지 클론 코딩
+# Feed Page Project
 
-이 프로젝트는 Velog 회원가입 페이지를 클론 코딩한 것입니다. JSX와 styled-components를 사용하여 UI를 구현하였으며, 기존 Velog 페이지와 유사한 사용자 경험을 제공하는 것을 목표로 했습니다.
+## 개요
 
-## 주요 기능
+이 프로젝트는 사용자 피드를 표시하는 웹 애플리케이션입니다. 사용자는 다양한 포스트를 보고, 각각의 포스트에 좋아요를 클릭할 수 있습니다. 이 애플리케이션은 React와 Styled-components를 사용하여 개발되었습니다.
 
-- **JSX**: React에서 HTML 요소를 구성하여 유연한 UI 구현
-- **Styled-components**: 컴포넌트별로 스타일을 작성하여 코드의 재사용성과 가독성 향상
-- **Velog 회원가입 페이지 클론**: 실제 Velog 페이지를 기반으로 한 디자인 및 레이아웃
+## 기술 스택
 
-## 미리 보기
+- React
+- Styled-components
+- JavaScript
 
-![미리보기](./public/example.jpeg)
+## 설치 방법
 
-## 설치 및 실행
+1. **레포지토리 클론**
 
-```bash
-# 패키지 설치
-npm install
+   ```bash
 
-# 로컬 서버 실행
-npm start
-
+   git clone https://github.com/username/repository.git
+   cd repository
