@@ -141,14 +141,15 @@ export const ButtonIcon = styled.button`
   &:hover {
     background-color: #f8f9fa;
   }
-gap: 0px;
-border-radius: 16.5px 0px 0px 0px;
-border: 1px 0px 0px 0px;
-opacity: 0px;
+font-weight: bold;
+border-radius: 16.5px;
+border: 1px solid black;
+
 
 `;
 
-export const Image = styled.img`
+export const StyledImage = styled.img`
   width: 15px;
   height: 15px;
+  object-fit: cover;
 `;
