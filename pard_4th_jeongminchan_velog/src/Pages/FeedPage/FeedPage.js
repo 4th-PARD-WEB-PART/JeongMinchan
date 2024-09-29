@@ -3,7 +3,6 @@ import {
     FeedContainer,
     FeedHeader,
     PostGrid,
-    PostCard,
     PostImage,
     PostDetails,
     PostTitle,
@@ -17,14 +16,14 @@ import {
     FeedHeaderBottom,
     FeedHeaderTop,
     ButtonIcon,
-    StyledImage
+    StyledImage,
+    StyledRadius,
+    Sort,
+    StyledTrendingContainer
 } from './Mycomponent';
 
-
-
-
 function FeedPage() {
-    const BellIcon = "/src/image/bell.png";
+    // 게시물 데이터
     const posts = [
         {
             id: 1,
@@ -49,7 +48,7 @@ function FeedPage() {
             title: "게으르다고 쫓겨났다",
             main: "회사에서 게으르다고 쫓겨났다.",
             author: "살몬",
-            likes: 47,
+            likes: 46,
             date: "2034년 8월 14일",
             comments: 33
         },
@@ -58,7 +57,7 @@ function FeedPage() {
             title: "게으르다고 쫓겨났다",
             main: "회사에서 게으르다고 쫓겨났다.",
             author: "살몬",
-            likes: 47,
+            likes: 46,
             date: "2034년 8월 14일",
             comments: 33
         },
@@ -67,96 +66,107 @@ function FeedPage() {
             title: "게으르다고 쫓겨났다",
             main: "회사에서 게으르다고 쫓겨났다.",
             author: "살몬",
-            likes: 47,
+            likes: 46,
             date: "2034년 8월 14일",
             comments: 33
         },
         {
-            id: 6,
+            id: 2,
             title: "게으르다고 쫓겨났다",
             main: "회사에서 게으르다고 쫓겨났다.",
             author: "살몬",
-            likes: 47,
+            likes: 46,
             date: "2034년 8월 14일",
             comments: 33
-        }
+        },
+      
     ];
 
+    // 좋아요 수 및 이미지 상태 관리
     const [likeCounts, setLikeCounts] = useState(posts.map(post => post.likes));
+    const [likeImages, setLikeImages] = useState(posts.map(() => "/Image/like.png"));
 
     const handleLike = (index) => {
         const newLikeCounts = [...likeCounts];
+        const newLikeImages = [...likeImages];
+
         newLikeCounts[index] += 1;
+        newLikeImages[index] = "/Image/likeactive.png";
         setLikeCounts(newLikeCounts);
+        setLikeImages(newLikeImages);
     };
 
     return (
         <PageContainer>
             <FeedContainer>
+                {/* 헤더 */}
                 <FeedHeader>
                     <FeedHeaderTop>
-                        <div>
-                            <img
-                                src="https://s3-alpha-sig.figma.com/img/26f2/3550/4b7c2c7e5f2e132c35e40c1d5f03069d?Expires=1728259200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nAFmJ41sDiFpGCWCtHFIGueG9Cqfo8YIUn2d5BjwzU18qz375TOKg22Pu8zXpRJTy0hc8wuMCI4fVp5twYAMQTgcBPcTtQ0HuEeePEKPsEtd0JYiZ7zqrLr1lPIz1Wbf~hbi5HFTJMTIzRwPjpM-8X~SElRMoMsHdSukQmaPQO7w-V3sOWY70rMf50b-2bXQLpCmESRCofshUhgRW9VzYH5MjGg4VEh6L9ij080Q4HY99ajjmqgU6lPyTWDGRxszy-6BeEpSiv2Gog4kqGoZQTPrX20vbW5tDUCt5xJ5A9eB6AD6IM6AQvob4z13EJCUyNvoTctAKr0RrZH6rEqAbw__"
-                                alt=""
-                                width="72px" />
-                        </div>
-                        <div>
-                            <div style={{
-                                flex: '0 1 auto',
-                                display: 'flex',
-                                gap: '10px',
-                                alignItems: 'center'
-                            }}>
-                                <div>
-                                <StyledImage src={BellIcon} alt='' />
-                                    <StyledImage
-                                     src={BellIcon} alt=''/>
-                                    <ButtonIcon>새 글 작성</ButtonIcon>
-                                </div>
-                                <div style={{
-                                    width: '20px',
-                                    height: '20px',
-                                    background: 'gray',
-                                    borderRadius: '50%'
-                                }}></div>
-                            </div>
-                        </div>
+                        <StyledImage src="/Image/velog logo.png" alt="velog logo" />
+                        <Sort>
+                            <StyledImage src="/Image/bell.png" alt="bell" width="20px" height="20px" />
+                            <StyledImage src="/Image/search.png" alt="search" width="20px" height="20px" />
+                            <ButtonIcon>새 글 작성</ButtonIcon>
+                            <StyledRadius />
+                        </Sort>
                     </FeedHeaderTop>
                     <FeedHeaderBottom>
-                        <div>
-                            트렌딩 최신 피드
-                        </div>
-                        <div>
-                            <div>이번 주</div>
-                            <div>...</div>
-                        </div>
+                        <Sort fontWeight="bold">
+                        <StyledTrendingContainer>
+            <StyledImage src="/Image/trending.png" alt="trending" width="30px" height="30px" />
+            <div className="trending-text">트렌딩</div>
+        </StyledTrendingContainer>
+                            <StyledImage src="/Image/clock.png" alt="clock" width="30px" height="30px" /><span>최신</span>
+                            <StyledImage src="/Image/wifi.png" alt="wifi" width="30px" height="30px" /><span>피드</span>
+                        </Sort>
+                        <Sort>
+                            <StyledImage src="/Image/dropdown.png" alt="dropdown" width="100px" height="30px" />
+                            <StyledImage src="/Image/dot.png" alt="dot" width="2px" height="15px" />
+                        </Sort>
                     </FeedHeaderBottom>
                 </FeedHeader>
+                
+                {/* 게시물 목록 */}
                 <PostGrid>
-                    {
-                        posts.map((post, index) => (
-                            <PostCard key={post.id}>
-                                <PostImage />
-                                <PostDetails>
-                                    <PostTitle>{post.title}</PostTitle>
-                                    <PostMain>{post.main}</PostMain>
-                                    <PostMeta>
-                                        <span>{post.date}</span>
-                                        <PostActionMeta>{post.comments}개의 댓글</PostActionMeta>
-                                    </PostMeta>
-                                </PostDetails>
-                                <PostActionContainer>
-                                    <PostAuthor>by {post.author}</PostAuthor>
-                                    <LikeIcon onClick={() => handleLike(index)}>❤ {likeCounts[index]}</LikeIcon>
-                                </PostActionContainer>
-                            </PostCard>
-                        ))
-                    }
+                    {posts.map((post, index) => (
+                        <PostCard
+                            key={post.id}
+                            post={post}
+                            likeCount={likeCounts[index]}
+                            likeImage={likeImages[index]}
+                            onLike={() => handleLike(index)}
+                        />
+                    ))}
                 </PostGrid>
             </FeedContainer>
         </PageContainer>
     );
 }
+
+// 게시물 카드 컴포넌트
+function PostCard({ post, likeCount, likeImage, onLike }) {
+    return (
+        <div>
+            <PostImage />
+            <PostDetails>
+                <PostTitle>{post.title}</PostTitle>
+                <PostMain>{post.main}</PostMain>
+                <PostMeta>
+                    <span>{post.date}</span>
+                    <PostActionMeta>{post.comments}개의 댓글</PostActionMeta>
+                </PostMeta>
+            </PostDetails>
+            <PostActionContainer>
+                <StyledRadius width="20px" height="20px" />
+                <PostAuthor><span>by</span> {post.author}</PostAuthor>
+                <LikeIcon onClick={onLike}>
+                    <StyledImage src={likeImage} alt="like icon" width="10px" height="10px" /> {likeCount}
+                </LikeIcon>
+            </PostActionContainer>
+        </div>
+    );
+}
+
+
 
 export default FeedPage;
