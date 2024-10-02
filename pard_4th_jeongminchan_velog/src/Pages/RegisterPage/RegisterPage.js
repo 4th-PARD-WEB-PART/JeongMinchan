@@ -1,4 +1,7 @@
 import React from 'react';
+import { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
+
 import {
     
     Page,
@@ -16,10 +19,23 @@ import {
     Span,
     Bottom,
     Button,
-    H1
+    H1,
+    BoxLink
 } from './Mycomponent.js';
+import FeedPage from '../FeedPage/FeedPage.js';
 
-function RegisterPage({ handleSignup }) {
+function RegisterPage() {
+    
+    const [isSignedUp, setIsSignedUp] = useState(false);
+
+    const handleSignup = () => {
+        setIsSignedUp(true);
+    };
+
+    if (isSignedUp) {
+        return <FeedPage />;
+    }
+
     return (
         <Page>
             <BaseContainer>
@@ -69,7 +85,7 @@ function RegisterPage({ handleSignup }) {
 
                 <Bottom>
                     <Button bgColor="orange">취소</Button>
-                    <Button onClick={handleSignup}>가입</Button>
+                    <Button onClick={handleSignup}><BoxLink to="/feed">가입</BoxLink></Button>
                 </Bottom>
             </BaseContainer>
         </Page>

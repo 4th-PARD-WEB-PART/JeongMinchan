@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import {
     FeedContainer,
     FeedHeader,
@@ -19,8 +20,10 @@ import {
     StyledImage,
     StyledRadius,
     Sort,
-    StyledTrendingContainer
+    StyledTrendingContainer,
+    BoxLink
 } from './Mycomponent';
+import DetailPage from '../DetailPage/DetailPage';
 
 function FeedPage() {
     // 게시물 데이터
@@ -127,17 +130,21 @@ function FeedPage() {
                 </FeedHeader>
                 
                 {/* 게시물 목록 */}
-                <PostGrid>
-                    {posts.map((post, index) => (
-                        <PostCard
-                            key={post.id}
-                            post={post}
-                            likeCount={likeCounts[index]}
-                            likeImage={likeImages[index]}
-                            onLike={() => handleLike(index)}
-                        />
-                    ))}
-                </PostGrid>
+                
+                    <PostGrid>
+                        
+                        {posts.map((post, index) => (
+                            <PostCard
+                                key={post.id}
+                                post={post}
+                                likeCount={likeCounts[index]}
+                                likeImage={likeImages[index]}
+                                onLike={() => handleLike(index)}
+                            />
+                        ))}
+                    </PostGrid>
+                
+                
             </FeedContainer>
         </PageContainer>
     );
@@ -147,22 +154,26 @@ function FeedPage() {
 function PostCard({ post, likeCount, likeImage, onLike }) {
     return (
         <div>
-            <PostImage />
-            <PostDetails>
-                <PostTitle>{post.title}</PostTitle>
-                <PostMain>{post.main}</PostMain>
-                <PostMeta>
-                    <span>{post.date}</span>
-                    <PostActionMeta>{post.comments}개의 댓글</PostActionMeta>
-                </PostMeta>
-            </PostDetails>
-            <PostActionContainer>
-                <StyledRadius width="20px" height="20px" />
-                <PostAuthor><span>by</span> {post.author}</PostAuthor>
-                <LikeIcon onClick={onLike}>
-                    <StyledImage src={likeImage} alt="like icon" width="10px" height="10px" /> {likeCount}
-                </LikeIcon>
-            </PostActionContainer>
+            {/* <BoxLink to="/detail" element={<DetailPage/>}/> */}
+            <BoxLink to="/detail" element={<DetailPage/>}>
+                <PostImage />
+                <PostDetails>
+                    <PostTitle>{post.title}</PostTitle>
+                    <PostMain>{post.main}</PostMain>
+                    <PostMeta>
+                        <span>{post.date}</span>
+                        <PostActionMeta>{post.comments}개의 댓글</PostActionMeta>
+                    </PostMeta>
+                </PostDetails>
+                <PostActionContainer>
+                    <StyledRadius width="20px" height="20px" />
+                    <PostAuthor><span>by</span> {post.author}</PostAuthor>
+                    <LikeIcon onClick={onLike}>
+                        <StyledImage src={likeImage} alt="like icon" width="10px" height="10px" /> {likeCount}
+                    </LikeIcon>
+                </PostActionContainer>
+            </BoxLink>
+            
         </div>
     );
 }

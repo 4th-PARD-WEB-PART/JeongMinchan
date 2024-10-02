@@ -1,19 +1,19 @@
-import { useState } from 'react';
+
 import FeedPage from './Pages/FeedPage/FeedPage';
 import RegisterPage from './Pages/RegisterPage/RegisterPage';
+import { Route, Routes } from 'react-router-dom';
+import DetailPage from './Pages/DetailPage/DetailPage';
 
 function App() {
-    const [isSignedUp, setIsSignedUp] = useState(false);
-
-    const handleSignup = () => {
-        setIsSignedUp(true);
-    };
-
-    if (isSignedUp) {
-        return <FeedPage />;
-    }
-
-    return <RegisterPage handleSignup={handleSignup} />;
+    
+    return(
+        <Routes>
+            <Route path="/" element={<RegisterPage />}/>
+            <Route path="/feed" element={<FeedPage/>}/>
+            <Route path="detail" element={<DetailPage/>}/>
+        </Routes>
+    );
+   
 }
 
 export default App;

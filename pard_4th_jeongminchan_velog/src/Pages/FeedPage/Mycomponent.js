@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 // 전체 페이지 컨테이너
 export const PageContainer = styled.div`
@@ -55,6 +56,7 @@ export const PostGrid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 20px;
+
 `;
 
 // 포스트 카드
@@ -184,7 +186,7 @@ export const StyledRadius = styled.div`
 // 정렬 컴포넌트
 export const Sort = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 18px;
   align-items: center;
   font-weight: ${({ fontWeight }) => fontWeight || 'auto'};
 `;
@@ -209,4 +211,10 @@ export const StyledTrendingContainer = styled.div`
   .trending-text {
     margin-left: 8px; /* 이미지와 텍스트 간격 조절 */
   }
+`;
+
+/* 박스 클릭시 DetailPage로 이동하는 태그 */
+export const BoxLink = styled(Link)`
+  text-decoration: none; 
+  color: inherit; 
 `;

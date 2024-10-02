@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 
 // 입력 요소 (All)
 export const Input = styled.input `
@@ -154,4 +154,9 @@ margin-right: 10px;
   color: white;
   background-color: #15B886;
 }
+`;
+
+export const BoxLink = styled(Link)`
+  color: inherit;
+  text-decoration: none;
 `;
