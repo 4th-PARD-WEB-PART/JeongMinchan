@@ -145,9 +145,10 @@ export const LikeIcon = styled.div`
   font-size: 14px;
   color: #ff6b6b;
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
+  justify-content: inherit;
   align-items: center;
-  margin-left: auto;
+  /* margin-left: auto; */
   gap: 5px;
 `;
 

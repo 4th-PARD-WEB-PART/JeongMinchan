@@ -39,11 +39,15 @@ function RegisterPage() {
     return (
         <Page>
             <BaseContainer>
-                <Header>
 
+                {/* 헤더요소 */}
+
+                <Header>
                     <H1>환영합니다!</H1>
                     <p>기본 회원 정보를 등록해주세요</p>
                 </Header>
+
+                {/* 바디요소 */}
 
                 <Body>
                     <Box>
@@ -83,9 +87,14 @@ function RegisterPage() {
                     </Box>
                 </Body>
 
+                {/* 가입 밑 취소 버튼 요소 */}
+
                 <Bottom>
                     <Button bgColor="orange">취소</Button>
-                    <Button onClick={handleSignup}><BoxLink to="/feed">가입</BoxLink></Button>
+                    <Button onClick={handleSignup}>
+                        {/* import link 해줘야함 */}
+                        <BoxLink to="/feed">가입</BoxLink>
+                    </Button>
                 </Bottom>
             </BaseContainer>
         </Page>

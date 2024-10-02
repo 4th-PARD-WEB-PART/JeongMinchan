@@ -102,8 +102,10 @@ function FeedPage() {
     return (
         <PageContainer>
             <FeedContainer>
-                {/* 헤더 */}
                 <FeedHeader>
+
+                    {/* 상위 헤더 요소 */}
+
                     <FeedHeaderTop>
                         <StyledImage src="/Image/velog logo.png" alt="velog logo" />
                         <Sort>
@@ -113,26 +115,33 @@ function FeedPage() {
                             <StyledRadius />
                         </Sort>
                     </FeedHeaderTop>
+
+                    {/* 하위 헤더 요소 */}
+
                     <FeedHeaderBottom>
                         <Sort fontWeight="bold">
                         <StyledTrendingContainer>
-            <StyledImage src="/Image/trending.png" alt="trending" width="30px" height="30px" />
-            <div className="trending-text">트렌딩</div>
-        </StyledTrendingContainer>
-                            <StyledImage src="/Image/clock.png" alt="clock" width="30px" height="30px" /><span>최신</span>
-                            <StyledImage src="/Image/wifi.png" alt="wifi" width="30px" height="30px" /><span>피드</span>
+                            <StyledImage src="/Image/trending.png" alt="trending" width="30px" height="30px" />
+                            <div className="trending-text">트렌딩</div>
+                        </StyledTrendingContainer>
+                            <StyledImage src="/Image/clock.png" alt="clock" width="30px" height="30px" />
+                            <span>최신</span>
+                            <StyledImage src="/Image/wifi.png" alt="wifi" width="30px" height="30px" />
+                            <span>피드</span>
                         </Sort>
                         <Sort>
                             <StyledImage src="/Image/dropdown.png" alt="dropdown" width="100px" height="30px" />
                             <StyledImage src="/Image/dot.png" alt="dot" width="2px" height="15px" />
                         </Sort>
                     </FeedHeaderBottom>
+
                 </FeedHeader>
                 
                 {/* 게시물 목록 */}
                 
                     <PostGrid>
-                        
+                        {/* 리스트 rendering */}
+                        {/* 컴포넌트 mapping */}
                         {posts.map((post, index) => (
                             <PostCard
                                 key={post.id}
@@ -143,39 +152,43 @@ function FeedPage() {
                             />
                         ))}
                     </PostGrid>
-                
-                
+                    
             </FeedContainer>
         </PageContainer>
     );
 }
 
 // 게시물 카드 컴포넌트
-function PostCard({ post, likeCount, likeImage, onLike }) {
+function PostCard({post, likeCount, likeImage, onLike}) {
     return (
         <div>
-            {/* <BoxLink to="/detail" element={<DetailPage/>}/> */}
-            <BoxLink to="/detail" element={<DetailPage/>}>
-                <PostImage />
-                <PostDetails>
-                    <PostTitle>{post.title}</PostTitle>
-                    <PostMain>{post.main}</PostMain>
-                    <PostMeta>
-                        <span>{post.date}</span>
-                        <PostActionMeta>{post.comments}개의 댓글</PostActionMeta>
-                    </PostMeta>
-                </PostDetails>
-                <PostActionContainer>
-                    <StyledRadius width="20px" height="20px" />
-                    <PostAuthor><span>by</span> {post.author}</PostAuthor>
-                    <LikeIcon onClick={onLike}>
-                        <StyledImage src={likeImage} alt="like icon" width="10px" height="10px" /> {likeCount}
-                    </LikeIcon>
-                </PostActionContainer>
-            </BoxLink>
-            
-        </div>
-    );
+        <BoxLink to = "/detail" element = {
+            <DetailPage/>
+        } > <PostImage/>
+        <PostDetails>
+            <PostTitle>{post.title}</PostTitle>
+            <PostMain>{post.main}</PostMain>
+            <PostMeta>
+                <span>{post.date}</span>
+                <PostActionMeta>{post.comments}개의 댓글</PostActionMeta>
+            </PostMeta>
+        </PostDetails>
+        </BoxLink>
+
+        <PostActionContainer>
+            <StyledRadius width="20px" height="20px"/>
+            <PostAuthor>
+                <span>by</span>
+                {post.author}</PostAuthor>
+            <LikeIcon
+            onClick={onLike}
+            style={({
+                marginLeft:'auto'
+            })}>
+                <StyledImage src={likeImage} alt="like icon" width="10px" height="10px"/> {likeCount}
+            </LikeIcon>
+        </PostActionContainer>
+</div>);
 }
 
 

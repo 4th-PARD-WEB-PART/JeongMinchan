@@ -38,13 +38,13 @@ export const LeftSideBar = styled.div`
   width: 64px;
   display: flex;
   flex-direction: row;
-  margin-top: 208px;
+  margin-top: 288px;
   padding-left: 20px;
 `;
 
 export const LeftSideBarContent = styled.div`
 width: 64px;
-height: 129px;
+height: 149px;
 background: #F8F9FA;
 border-radius: 32px;
 display: flex;
@@ -74,23 +74,26 @@ export const FeedInfo = styled.div`
 `;
 
 export const Name = styled.span`
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
 `;
 
 export const Date = styled.span`
-  font-size: 18px;
-  color: #999;
+  font-size: 14px;
+  color: black;
 `;
 
 export const ButtonList = styled.div`
   display: flex;
   align-items: center;
+  color: #858E96;
+  
+
   gap: 10px;
 `;
 
 export const FeedContent = styled.div`
-  font-size: 21px;
+  font-size: 15px;
   margin-bottom: 250px;
 `;
 
@@ -122,7 +125,7 @@ export const AuthorName = styled.div`
 
 export const AuthorInfo = styled.div`
   font-size: 14px;
-  color: #777;
+  color: black;
 `;
 
 export const LinkList = styled.div`
@@ -140,3 +143,15 @@ export const StyledImage = styled.img`
   }
 `;
 
+export const Radius = styled.div`
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  margin-top:10px;
+  border-radius: 50%;
+  border: 1px solid #dee2e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`;
