@@ -148,7 +148,6 @@ export const LikeIcon = styled.div`
   display: flex;
   justify-content: inherit;
   align-items: center;
-  /* margin-left: auto; */
   gap: 5px;
 `;
 
