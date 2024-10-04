@@ -129,8 +129,8 @@ export const AuthorInfo = styled.div`
 `;
 
 export const LinkList = styled.div`
+  margin-top: 27.5px;
   display: flex;
-  width: 768px;
   gap: 10px;
 `;
 
@@ -154,4 +154,10 @@ export const Radius = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+`;
+
+export const Line = styled.div`
+width: 768px;
+margin-top: 28px;
+border-bottom: 1px solid #dee2e6;
 `;

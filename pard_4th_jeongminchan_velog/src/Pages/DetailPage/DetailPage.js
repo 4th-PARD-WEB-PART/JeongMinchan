@@ -15,6 +15,7 @@ import {
     Header,
     LeftSideBar,
     LeftSideBarContent,
+    Line,
     LinkList,
     MainContainer,
     Name,
@@ -26,6 +27,17 @@ function DetailPage() {
     const posts = [
         { likes: 0 }
     ];
+
+    const Info = {
+        title : "PARD 4기 화이팅",
+        content : "이 글은 PARD 4기 여러분에게 과제가 될 것입니다.",
+        author_name : "김광일",
+        author_id : "oksk6681",
+        author_image : "/Img/DetailPage/kwangil.png",
+        author_info : "개발을 꿈꾸는 사람입니다.",
+        date : "24.08.14",
+        heart_count : "0"
+    };
 
     const [likeCounts, setLikeCounts] = useState(posts.map(post => post.likes));
     const [likeImages, setLikeImages] = useState(posts.map(() => "/Image/like.png"));
@@ -90,12 +102,12 @@ function DetailPage() {
                 </LeftSideBar>
 
                 <FeedContainer>
-                    <FeedTitle>PARD 4기 화이팅</FeedTitle>
+                    <FeedTitle>{Info.title}</FeedTitle>
 
                     <FeedInfo>
                         <div style={{display:'flex',gap:'20px'}}>
-                            <Name>김광일 </Name>
-                            <Date> 24.08.14</Date>
+                            <Name>{Info.author_name}</Name>
+                            <Date>{Info.date}</Date>
                         
                             </div>
                         <ButtonList>
@@ -105,19 +117,39 @@ function DetailPage() {
                         </ButtonList>
                     </FeedInfo>
                     <FeedContent>
-                        이 글은 PARD 4기 여러분에게 과제가 될 것입니다.
+                        {Info.content}
                     </FeedContent>
                     <FeedAuthorInfo>
                         <AuthorImage />
                         <div>
-                            <AuthorName>김광일</AuthorName>
-                            <AuthorInfo>개발을 꿈꾸는 사람입니다.</AuthorInfo>
+                            <AuthorName>{Info.author_name}</AuthorName>
+                            <AuthorInfo>{Info.author_info}</AuthorInfo>
                         </div>
                     </FeedAuthorInfo>
+                    <Line></Line>
                     <LinkList>
-                        {/* <a href="#">GitHub</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Email</a> */}
+                        <StyledImage 
+                            src="/DetailImage/깃허브 아이콘.png"
+                            style={({ 
+                                height:'35px',
+                                width: '35px',
+                            })}
+                        />
+                        <StyledImage 
+                            src="/DetailImage/홈  아이콘.png"
+                            style={({ 
+                                height:'35px',
+                                width: '35px',
+                            })}
+                        />
+                        <StyledImage 
+                            src="/DetailImage/메일 아이콘.png"
+                            style={({ 
+                                height:'35px',
+                                width: '35px',
+                            })}
+                        />
+                   
                     </LinkList>
                 </FeedContainer>
             </MainContainer>

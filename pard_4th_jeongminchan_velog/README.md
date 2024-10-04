@@ -1,20 +1,10 @@
-# Feed Page Project
 
-## 개요
+# DetailPage
 
-이 프로젝트는 사용자 피드를 표시하는 웹 애플리케이션입니다. 사용자는 다양한 포스트를 보고, 각각의 포스트에 좋아요를 클릭할 수 있습니다. 이 애플리케이션은 React와 Styled-components를 사용하여 개발되었습니다.
+DetailPage는 React 및 Styled-Components를 사용하여 구현된 피드 상세 페이지입니다. 이 컴포넌트는 사용자에게 특정 게시물의 상세 정보를 보여주며, 좋아요 버튼을 통해 상호작용할 수 있습니다.
 
-## 기술 스택
+## Features
 
-- React
-- Styled-components
-- JavaScript
-
-## 설치 방법
-
-1. **레포지토리 클론**
-
-   ```bash
-
-   git clone https://github.com/username/repository.git
-   cd repository
+- **Like 버튼**: 좋아요 아이콘을 클릭하면 좋아요 수가 증가하며, 버튼의 이미지가 변경됩니다.
+- **저자 정보**: 게시물의 저자 이미지, 이름, 정보를 제공하며, 저자의 다른 링크(깃허브, 홈페이지 등)로 연결할 수 있습니다.
+- **반응형**: 페이지는 다양한 화면 크기에 대응할 수 있는 반응형 레이아웃을 갖추고 있습니다.
