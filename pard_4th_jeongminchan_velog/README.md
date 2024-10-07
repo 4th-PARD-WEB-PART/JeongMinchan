@@ -14,4 +14,7 @@ DetailPage는 React 및 Styled-Components를 사용하여 구현된 피드 상�
 - Pay It Forward
 
 - 404 Page 구현
-  
+
+# EditPage
+
+EditPage는 사용자가 개인의 정보를 수정할 때 사용하는 페이지 입니다. 이 컴포넌트는 RecoilState를 사용하여 전역적 상태 관리를 통해 보다 더 나은 데이터 관리를 이룰 수 있습니다.
