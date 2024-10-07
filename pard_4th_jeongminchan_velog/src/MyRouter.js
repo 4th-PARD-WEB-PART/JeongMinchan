@@ -3,6 +3,7 @@ import RegisterPage from './Pages/RegisterPage/RegisterPage';
 import { Route, Routes } from 'react-router-dom';
 import DetailPage from './Pages/DetailPage/DetailPage';
 import NotFound from './Pages/ErrorPage/NotFound';
+import EditPage from './Pages/EditPage/EditPage';
 
 
 function MyRouter() {
@@ -15,9 +16,11 @@ function MyRouter() {
           {/* 피드 페이지 */}
           <Route path="/feed" element={<FeedPage/>}/>
           {/* 상세 페이지 */}
-          <Route path="detail" element={<DetailPage/>}/>
+          <Route path="/detail" element={<DetailPage/>}/>
           {/* 404 페이지 */}
           <Route path="/*" element={<NotFound />} />
+          {/* 편집 페이지 */}
+          <Route path="/edit" element={<EditPage/>}/>
       </Routes>
   );
  

@@ -1,4 +1,6 @@
 import { BoxLink, ButtonIcon, LikeIcon, Sort } from "../FeedPage/Mycomponent";
+import { useRecoilState } from "recoil";
+import { myInfoIntroduce, myInfoname } from '../../Atom';
 import { useState } from "react";
 import {
     AuthorImage,
@@ -26,6 +28,8 @@ import {
 
 function DetailPage() {
     // 포스트 정보를 담고 있는 배열
+    const [myName] = useRecoilState(myInfoname);
+    const [myIntroduce] = useRecoilState(myInfoIntroduce);
     const posts = [
         {
             likes: 0 // 초기 좋아요 수
@@ -36,7 +40,6 @@ function DetailPage() {
     const Info = {
         title: "PARD 4기 화이팅",
         content: "이 글은 PARD 4기 여러분에게 과제가 될 것입니다.",
-        author_name: "김광일",
         author_id: "oksk6681",
         author_info: "개발을 꿈꾸는 사람입니다.",
         date: "24.08.14"
@@ -132,7 +135,7 @@ function DetailPage() {
                                 display: 'flex',
                                 gap: '20px'
                             }}>
-                            <Name>{Info.author_name}</Name>
+                            <Name>{myName}</Name>
                             <Date>{Info.date}</Date>
                         </div>
                         <ButtonList>
@@ -147,8 +150,8 @@ function DetailPage() {
                     <FeedAuthorInfo>
                         <AuthorImage/>
                         <div>
-                            <AuthorName>{Info.author_name}</AuthorName>
-                            <AuthorInfo>{Info.author_info}</AuthorInfo>
+                            <AuthorName>{myName}</AuthorName>
+                            <AuthorInfo>{myIntroduce}</AuthorInfo>
                         </div>
                     </FeedAuthorInfo>
                     <Line></Line>

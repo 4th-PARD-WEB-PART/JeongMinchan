@@ -6,6 +6,22 @@ export const Input = styled.input `
   width: 300px;
   border-width: 0;
   height: 30px;
+  font-size: 17px;
+  
+  &::placeholder {
+    font-size: 17px;
+    color: #ACB5BD;
+  }
+`;
+export const EditInput = styled.input `
+  width: 300px;
+  border-width: 0;
+  height: 30px;
+  font-size: 17px;
+  color: #ACB5BD;
+  &:focus {
+    color: #15B886;
+  }
   &::placeholder {
     font-size: 17px;
     color: #ACB5BD;
