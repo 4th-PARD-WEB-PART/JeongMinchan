@@ -1,5 +1,5 @@
 
-# DetailPage
+# DetailPage 컴포넌트
 
 DetailPage는 React 및 Styled-Components를 사용하여 구현된 피드 상세 페이지입니다. 이 컴포넌트는 사용자에게 특정 게시물의 상세 정보를 보여주며, 좋아요 버튼을 통해 상호작용할 수 있습니다.
 
@@ -15,6 +15,13 @@ DetailPage는 React 및 Styled-Components를 사용하여 구현된 피드 상�
 
 - 404 Page 구현
 
-# EditPage
+# EditPage 컴포넌트
 
-EditPage는 사용자가 개인의 정보를 수정할 때 사용하는 페이지 입니다. 이 컴포넌트는 RecoilState를 사용하여 전역적 상태 관리를 통해 보다 더 나은 데이터 관리를 이룰 수 있습니다.
+EditPage 컴포넌트는 사용자가 이름, 이메일, 비밀번호, 한 줄 소개 등 기본 정보를 수정할 수 있는 React 컴포넌트입니다. 상태 관리를 위해 **Recoil**을 사용하고, 페이지 이동을 위해 **React Router**를 사용합니다.
+
+## 설치 방법
+
+이 컴포넌트를 사용하기 전에 필요한 의존성을 설치해야 합니다:
+
+```bash
+npm install recoil react-router-dom
