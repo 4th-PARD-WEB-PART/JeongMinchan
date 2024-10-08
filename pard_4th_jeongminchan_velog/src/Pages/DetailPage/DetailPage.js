@@ -32,7 +32,7 @@ function DetailPage() {
     const [myIntroduce] = useRecoilState(myInfoIntroduce);
     const posts = [
         {
-            likes: 0 // 초기 좋아요 수
+            likes: 0
         }
     ];
 
@@ -51,16 +51,19 @@ function DetailPage() {
         posts.map(() => "/Image/like.png")
     );
 
-    // 좋아요 버튼 클릭 시 호출되는 함수
     const handleLike = (index) => {
-        const newLikeCounts = [...likeCounts]; // 현재 좋아요 수 복사
-        const newLikeImages = [...likeImages]; // 현재 좋아요 이미지 복사
-
-        // 좋아요 수 증가 및 이미지 변경
-        newLikeCounts[index] += 1;
-        newLikeImages[index] = "/Image/likeactive.png";
-        setLikeCounts(newLikeCounts); // 새로운 좋아요 수 상태 업데이트
-        setLikeImages(newLikeImages); // 새로운 좋아요 이미지 상태 업데이트
+        const newLikeCounts = [...likeCounts];
+        const newLikeImages = [...likeImages];
+    
+        if (newLikeImages[index] === "/Image/likeactive.png") {
+            newLikeCounts[index] -= 1;
+            newLikeImages[index] = "/Image/like.png";
+        } else {
+            newLikeCounts[index] += 1;
+            newLikeImages[index] = "/Image/likeactive.png";
+        }
+        setLikeCounts(newLikeCounts);
+        setLikeImages(newLikeImages);
     };
 
     return (
