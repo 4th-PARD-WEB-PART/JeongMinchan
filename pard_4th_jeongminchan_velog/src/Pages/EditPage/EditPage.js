@@ -3,7 +3,8 @@ import { useRecoilState } from "recoil";
 import { myInfoEmail, myInfoIntroduce, myInfoPassword, myInfoname } from '../../Atom';
 import { useNavigate } from "react-router-dom";
 
-import { BaseContainer, Body, Bottom, Box, Button, EditInput, Email, H1, Header, Introduce, Label, Name, Page, Password } from "../RegisterPage/Mycomponent";
+import { BaseContainer, Body, Bottom, Box, BoxLink, Button, EditInput, Email, H1, Header, Introduce, Label, Name, Page, Password } from "../RegisterPage/Mycomponent";
+import { ButtonIcon, FeedHeaderTop, Sort, StyledImage, StyledRadius } from '../FeedPage/Mycomponent';
 
 
 
@@ -26,8 +27,26 @@ function EditPage () {
     }
   }
   return (
-    <Page>
-            <BaseContainer>
+    <Page page = "edit">
+        <FeedHeaderTop style={({
+            width: '1100px',
+            height: '60px',
+        })}>
+        <StyledImage src="/Image/velog logo.png" alt="velog logo"/>
+                <Sort>
+                    <StyledImage src="/Image/bell.png" alt="bell" width="20px" height="20px"/>
+                    <StyledImage src="/Image/search.png" alt="search" width="20px" height="20px"/>
+                    <ButtonIcon>새 글 작성</ButtonIcon>
+                    <BoxLink to="/edit"><StyledRadius/>
+                    </BoxLink>
+
+                </Sort>
+            </FeedHeaderTop>
+            <BaseContainer style={({
+                
+            })}>
+            
+            
 
                 {/* 헤더요소 */}
 

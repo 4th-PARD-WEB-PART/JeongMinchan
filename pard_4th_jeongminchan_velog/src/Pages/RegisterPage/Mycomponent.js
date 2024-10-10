@@ -57,8 +57,11 @@ export const Page = styled.div `
 width: 1800px;
 height: 1000px;
 display: flex;
-justify-content: center;
+justify-content: ${props=> props.page === "edit" ? "" :"center"};
+align-items: center;
+flex-direction: ${props => props.page === "edit" ? "column" : "row"};
 `;
+
 
 
 // 폼 페이지 요소
@@ -71,7 +74,7 @@ height : 500px;
 export const Header = styled.div `
 width: 373px;
 height: 20%;
-margin: 168px 0 30px 0;
+/* margin: 168px 0 30px 0; */
 `;
 
 /* ------------------------------------------메인 요소-------------------------------------------- */
