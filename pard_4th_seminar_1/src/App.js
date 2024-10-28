@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+// import { BaseContainer, Content, Email, Input, Name } from './MyComponent';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+// function App() {
+//   return (
+//     <BaseContainer>
+//       <Name>이름</Name>
+//       <Input type='text'/>
+//       <Email>이메일</Email>
+//       <Input type='text'/>
+//       <Content>콘텐츠</Content>
+//       <Input type='text'/>
+//     </BaseContainer>
+//   );
+// }
+

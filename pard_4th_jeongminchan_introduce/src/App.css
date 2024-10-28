@@ -16,7 +16,7 @@ p {
   margin-top: 15px;
 }
 .header {
-  display: flex; /* 공간 자동 분배*/
+  display: flex; /* 공간 자동 분배 */
   width: 800px; /* 행 길이 */
   height: 100px; /* 열 길이 */
   font-size: xx-large; /* 폰트 크기 */
