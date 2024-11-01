@@ -18,9 +18,8 @@ function App() {
     // 있다면 해당 파트의 구성원을 불러옴을 인지하세요.
     // 각각의 파트는 parameter로 'server', 'web', 'iOS' 로 정확히 기입 되어야만 합니다.
 
-    //your code here
     try{
-      const response = await getMembersAPI(part);
+      const response = await getMembersAPI(part); 
       setMembers(response.data);
     } catch (error) {
       console.error("Error fetching members:", error);
